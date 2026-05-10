@@ -1,5 +1,5 @@
 // ============================================
-// Doc-Kit — Immersive Landing Page Scripts
+// Dockit — Immersive Landing Page Scripts
 // ============================================
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -276,6 +276,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  console.log('%c◇ Doc-Kit v1.2', 'font-size:20px; font-weight:800; color:#6c5ce7;');
+  // ---------- 13. FAQ ACCORDION ----------
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      item.classList.toggle('open');
+    });
+  });
+
+  console.log('%c◇ Dockit v1.2', 'font-size:20px; font-weight:800; color:#6c5ce7;');
   console.log('%cOpen source. Audited. Yours.', 'font-size:12px; color:#8888a0;');
 });
